@@ -18,8 +18,18 @@
 
 ## 安装
 
+### 从 GitHub 安装（推荐）
+
 ```powershell
-dsh plugin --profile desktop add D:\Documents\deepseek-harness\default-workspace\dsh-silverwolf-theme
+dsh plugin --profile desktop add github:qiyuelianfeng/dsh-silverwolf-theme
+```
+
+> 把 `--profile desktop` 换成你自己的 profile 名（Web 端一般是 `web`，桌面端是 `desktop`）。
+
+### 从本地目录安装（开发用）
+
+```powershell
+dsh plugin --profile desktop add D:\path\to\dsh-silverwolf-theme
 ```
 
 装完刷新一次页面（客户端半 bundle 是页面加载时读的）。

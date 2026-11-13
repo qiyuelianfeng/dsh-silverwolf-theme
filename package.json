@@ -24,7 +24,6 @@
     "Background",
     "meme/*.png",
     "tools/*.mjs",
-    "test",
     "README.md",
     "LICENSE"
   ],
@@ -40,13 +39,13 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/berhbro/dsh-cyrene-theme.git"
+    "url": "git+https://github.com/qiyuelianfeng/dsh-silverwolf-theme.git"
   },
-  "homepage": "https://github.com/berhbro/dsh-cyrene-theme#readme",
+  "homepage": "https://github.com/qiyuelianfeng/dsh-silverwolf-theme#readme",
   "bugs": {
-    "url": "https://github.com/berhbro/dsh-cyrene-theme/issues"
+    "url": "https://github.com/qiyuelianfeng/dsh-silverwolf-theme/issues"
   },
-  "author": "adapted from berhbro/dsh-cyrene-theme",
+  "author": "qiyuelianfeng (adapted from berhbro/dsh-cyrene-theme)",
   "engines": {
     "node": ">=18"
   },

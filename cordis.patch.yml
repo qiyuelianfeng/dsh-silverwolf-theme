@@ -1,5 +1,5 @@
 # 银狼主题 bundle patch：把本包插入 profile 的插件树。
-# 安装：dsh plugin --profile desktop add D:\dshWorkPlace\dsh-silverwolf-theme
+# 安装：dsh plugin --profile desktop add github:qiyuelianfeng/dsh-silverwolf-theme
 - insert:
     - id: ui-silverwolf-theme
       name: dsh-silverwolf-theme

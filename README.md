@@ -42,11 +42,11 @@ dsh plugin --profile desktop add D:\path\to\dsh-silverwolf-theme
 
 ## 截图
 
-欢迎页立绘与背景壁纸（均为银狼LV.999 官方素材）：
+欢迎页立绘与背景壁纸（银狼LV.999 素材，网络搜集，仅作展示）：
 
 | 欢迎页立绘 | 背景壁纸 |
 | --- | --- |
-| ![银狼LV.999 立绘](meme/hero-silverwolf.png) | ![银狼LV.999 贺图](Background/silverwolf-lv999-art.jpg) |
+| ![银狼LV.999 立绘](meme/hero-silverwolf.png) | ![银狼LV.999 壁纸](Background/silverwolf-lv999-art.jpg) |
 
 > 插件市场用的截图清单在仓库根的 [`screenshots.json`](screenshots.json)（第一张为封面）。
 

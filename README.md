@@ -1,5 +1,6 @@
 # dsh-silverwolf-theme · 银狼LV.999 主题
 
+[![npm](https://img.shields.io/npm/v/dsh-silverwolf-theme?label=npm&color=5b9bff)](https://www.npmjs.com/package/dsh-silverwolf-theme)
 [![license](https://img.shields.io/badge/license-MIT-5b9bff)](LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/qiyuelianfeng/dsh-silverwolf-theme?color=5b9bff)](https://github.com/qiyuelianfeng/dsh-silverwolf-theme)
 
@@ -7,7 +8,7 @@
 
 > **English** — A silver-white cyber frosted-glass skin for the DSH Web GUI, themed after Silver Wolf LV.999 from *Honkai: Star Rail*. It also rewrites the agent persona (editable from the sidebar), replaces the new-session hero fish with her, and adds a full-page background manager (enable / pick / rotate / fade the image, upload your own).
 >
-> Install: `dsh plugin --profile desktop add github:qiyuelianfeng/dsh-silverwolf-theme` — then reload the page. UI text is Chinese.
+> Install: `dsh plugin --profile desktop add dsh-silverwolf-theme` — then reload the page. UI text is Chinese.
 >
 > **Unofficial fan project.** Silver Wolf LV.999 and all *Honkai: Star Rail* character art, names and assets are © miHoYo / HoYoverse, used here as non-commercial fan work. Not affiliated with or endorsed by miHoYo, HoYoverse or DeepSeek — see 「版权与致谢」 below.
 
@@ -23,7 +24,13 @@
 
 ## 安装
 
-从 GitHub（推荐）：
+从 npm（推荐）：
+
+```powershell
+dsh plugin --profile desktop add dsh-silverwolf-theme
+```
+
+从 GitHub（跟随 `main` 最新提交）：
 
 ```powershell
 dsh plugin --profile desktop add github:qiyuelianfeng/dsh-silverwolf-theme

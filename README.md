@@ -18,7 +18,7 @@
 | 人格设定 | 宿主半注册 `systemPrompt.section({ name: 'silverwolf:persona', ... })`，人格底稿为银狼LV.999（慵懒毒舌的满级骇客，欢愉命途 · 虚数属性），侧边栏可编辑，改完立即对之后每一轮对话生效。 |
 | 背景图 | 随包 `Background/`（含银狼LV.999 官方壁纸）+ 面板上传 `backgrounds-custom/`，支持开关、选起点、轮换、淡化、上传/删除。 |
 | 长期记忆 | 存在 `$DSH_HOME/silverwolf-memory.json`，工具 `silverwolf_memory_add / search / forget`，独立 section 注入。 |
-| 世界书 | 设定库存在 `$DSH_HOME/silverwolf-worldbook.json`，工具 `silverwolf_worldbook_search` 检索。面板里可**从 BWIKI 官方 wiki 一键抓取**「银狼 / 银狼LV.999」两个角色的档案、故事、简介。 |
+| 世界书 | 设定库存在 `$DSH_HOME/silverwolf-worldbook.json`，工具 `silverwolf_worldbook_search` 检索。面板里可**从 BWIKI（wiki.biligame.com/sr）一键抓取**「银狼 / 银狼LV.999」两个角色的档案、故事、简介。**数据抓取为非官方行为，仅供个人学习使用，请勿高频抓取或商用**。 |
 
 ## 安装
 
@@ -66,6 +66,11 @@ dsh plugin --profile desktop add D:\path\to\dsh-silverwolf-theme
 - **背景图**：`Background/silverwolf-lv999-art.jpg` 是银狼LV.999 官方贺图（2973×1409，米游社@千里寻他）。
 
 > 上述立绘/壁纸素材下载自米哈游官方渠道，版权归 © miHoYo / HoYoverse 所有，仅作非商用同人使用。如需自用其他立绘，替换对应文件即可。
+
+## 数据来源与免责
+
+- **世界书抓取**：`build-worldbook.mjs` 与世界书面板里的「从官方 wiki 抓取」功能，数据抓取自 **BWIKI（wiki.biligame.com/sr）** 的公开角色页。这是**非官方**行为，仅供个人学习与检索使用；请勿高频抓取、勿将抓取内容商用，并遵守目标站点的使用条款与 `robots.txt`。
+- **角色设定与美术**：Silver Wolf LV.999 等角色名、设定文本、立绘、壁纸的版权归 **© miHoYo / HoYoverse** 所有。本作是**非官方同人项目**，与 miHoYo、HoYoverse、DeepSeek 均无隶属或合作关系。
 
 ## 版权与致谢
 

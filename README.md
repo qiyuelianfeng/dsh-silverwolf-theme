@@ -1,5 +1,9 @@
 # dsh-silverwolf-theme · 银狼 LV.999 主题
 
+[![license](https://img.shields.io/badge/license-MIT-5b9bff)](LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/qiyuelianfeng/dsh-silverwolf-theme?color=5b9bff)](https://github.com/qiyuelianfeng/dsh-silverwolf-theme)
+[![version](https://img.shields.io/badge/version-0.3.0-7a6fd0)](package.json)
+
 把 DSH Web GUI 换成《崩坏：星穹铁道》银狼LV.999（Silver Wolf LV.999，星核猎手 · 超级骇客的欢愉赛季 SP 形态）的银白赛博渐变毛玻璃主题，把 agent 的人格设定改成银狼LV.999——人格提示词可以直接在侧边栏里改——把新会话欢迎页换成她，顺手把输入框的默认提示换成她的话，还能把整页背景换成 `Background/` 里的壁纸（面板里开关、选起点、自动轮换、上传自定义；深色模式自动切换）。
 
 > **非官方同人项目。** Silver Wolf LV.999 与《崩坏：星穹铁道》相关角色名、设定、美术均为 © miHoYo / HoYoverse 所有，本作仅作非商用同人使用，与 miHoYo、HoYoverse 或 DeepSeek 无关。
@@ -36,14 +40,35 @@ dsh plugin --profile desktop add D:\path\to\dsh-silverwolf-theme
 
 卸载：`dsh plugin --profile desktop remove dsh-silverwolf-theme`。
 
+## 截图
+
+欢迎页立绘与背景壁纸（均为银狼LV.999 官方素材）：
+
+| 欢迎页立绘 | 背景壁纸 |
+| --- | --- |
+| ![银狼LV.999 立绘](meme/hero-silverwolf.png) | ![银狼LV.999 贺图](Background/silverwolf-lv999-art.jpg) |
+
+> 插件市场用的截图清单在仓库根的 [`screenshots.json`](screenshots.json)（第一张为封面）。
+
+## 使用
+
+1. 安装后刷新一次 DSH 页面。
+2. 侧边栏最下方、设置按钮旁边点「✦ 银狼」打开人格设定面板（Esc 或右上角 ✕ 关闭）。
+3. 也可以在「设置 → 银狼 · 主题」里打开同一份编辑器；标题右边的版本号读的是 `package.json`。
+4. 编辑框里写的就是人格底稿——内置默认是银狼LV.999（慵懒毒舌的满级骇客）；点「保存设定」后，之后每一轮对话都会以这段设定回答。
+5. 「✦ 背景图管理」是背景的唯一入口：浅色/深色外观、上传、选起点、自动轮换、淡化浓度。
+6. 「✦ 长期记忆」：模型用 `silverwolf_memory_add / search / forget` 读写，也可以手动加、删、清空。
+7. 「✦ 世界书」：内置银狼LV.999 设定库，模型用 `silverwolf_worldbook_search` 检索。
+
 ## 素材说明
 
 - **欢迎页立绘**：`meme/hero-silverwolf.png` 是银狼LV.999 官方立绘（2048×2048 透明 PNG）。
 - **背景图**：`Background/silverwolf-lv999-art.jpg` 是银狼LV.999 官方贺图（2973×1409，米游社@千里寻他）。
 
-> 上述立绘/壁纸素材下载自米哈游官方渠道，版权归 © miHoYo / HoYoverse 所有，仅作非商用同人使用。
+> 上述立绘/壁纸素材下载自米哈游官方渠道，版权归 © miHoYo / HoYoverse 所有，仅作非商用同人使用。如需自用其他立绘，替换对应文件即可。
 
 ## 版权与致谢
 
 - **参考模组**：[berhbro/dsh-cyrene-theme](https://github.com/berhbro/dsh-cyrene-theme)（昔涟 · Cyrene 主题，MIT License）
+- 本项目以 MIT License 发布，见 [LICENSE](LICENSE)。
 - Silver Wolf LV.999、Honkai: Star Rail © miHoYo / HoYoverse

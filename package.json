@@ -21,6 +21,7 @@
   "files": [
     "lib/*.js",
     "cordis.patch.yml",
+    "screenshots.json",
     "Background",
     "meme/*.png",
     "tools/*.mjs",

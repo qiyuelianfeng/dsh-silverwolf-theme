@@ -1,0 +1,15 @@
+# 依赖与运行时
+node_modules/
+*.log
+
+# 运行时状态数据（不随插件分发）
+stickers-custom/
+backgrounds-custom/
+silverwolf-theme.json
+silverwolf-memory.json
+silverwolf-worldbook.json
+
+# 系统与编辑器
+.DS_Store
+Thumbs.db
+*.tmp

@@ -62,15 +62,15 @@ dsh plugin --profile desktop add D:\path\to\dsh-silverwolf-theme
 
 ## 素材说明
 
-- **欢迎页立绘**：`meme/hero-silverwolf.png` 是银狼LV.999 官方立绘（2048×2048 透明 PNG）。
-- **背景图**：`Background/silverwolf-lv999-art.jpg` 是银狼LV.999 官方贺图（2973×1409，米游社@千里寻他）。
+- **欢迎页立绘**：`meme/hero-silverwolf.png` 是银狼LV.999 立绘（2048×2048 透明 PNG）。
+- **背景图**：`Background/silverwolf-lv999-art.jpg` 是银狼LV.999 壁纸（2973×1409，网络搜集）。
 
-> 上述立绘/壁纸素材下载自米哈游官方渠道，版权归 © miHoYo / HoYoverse 所有，仅作非商用同人使用。如需自用其他立绘，替换对应文件即可。
+> 上述立绘/壁纸素材搜集自网络，版权归原作者与 © miHoYo / HoYoverse 所有，仅作非商用同人使用。**如有素材涉及侵权，请通过仓库 Issues 告知，核实后将立即删除。** 如需自用其他立绘，替换对应文件即可。
 
 ## 数据来源与免责
 
 - **世界书抓取**：`build-worldbook.mjs` 与世界书面板里的「从官方 wiki 抓取」功能，数据抓取自 **BWIKI（wiki.biligame.com/sr）** 的公开角色页。这是**非官方**行为，仅供个人学习与检索使用；请勿高频抓取、勿将抓取内容商用，并遵守目标站点的使用条款与 `robots.txt`。
-- **角色设定与美术**：Silver Wolf LV.999 等角色名、设定文本、立绘、壁纸的版权归 **© miHoYo / HoYoverse** 所有。本作是**非官方同人项目**，与 miHoYo、HoYoverse、DeepSeek 均无隶属或合作关系。
+- **角色设定与美术**：Silver Wolf LV.999 等角色名、设定文本、立绘、壁纸的版权归原作者与 **© miHoYo / HoYoverse** 所有。本作是**非官方同人项目**，与 miHoYo、HoYoverse、DeepSeek 均无隶属或合作关系。**若发现任何内容侵犯了您的权益，请通过仓库 Issues 告知，我们将及时处理。**
 
 ## 版权与致谢
 

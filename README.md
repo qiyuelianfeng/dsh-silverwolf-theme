@@ -18,7 +18,7 @@
 | 人格设定 | 宿主半注册 `systemPrompt.section({ name: 'silverwolf:persona', ... })`，人格底稿为银狼LV.999（慵懒毒舌的满级骇客，欢愉命途 · 虚数属性），侧边栏可编辑，改完立即对之后每一轮对话生效。 |
 | 背景图 | 随包 `Background/`（含银狼LV.999 官方壁纸）+ 面板上传 `backgrounds-custom/`，支持开关、选起点、轮换、淡化、上传/删除。 |
 | 长期记忆 | 存在 `$DSH_HOME/silverwolf-memory.json`，工具 `silverwolf_memory_add / search / forget`，独立 section 注入。 |
-| 世界书 | 设定库存在 `$DSH_HOME/silverwolf-worldbook.json`，工具 `silverwolf_worldbook_search`，已内置银狼 + 银狼LV.999 的官方设定条目（档案/故事/关系/解析）。 |
+| 世界书 | 设定库存在 `$DSH_HOME/silverwolf-worldbook.json`，工具 `silverwolf_worldbook_search` 检索。**不随包分发数据**，需用 `tools/build-worldbook.mjs --source <wiki原始json>` 自行生成后放入设置页显示的路径。 |
 
 ## 安装
 
@@ -58,7 +58,7 @@ dsh plugin --profile desktop add D:\path\to\dsh-silverwolf-theme
 4. 编辑框里写的就是人格底稿——内置默认是银狼LV.999（慵懒毒舌的满级骇客）；点「保存设定」后，之后每一轮对话都会以这段设定回答。
 5. 「✦ 背景图管理」是背景的唯一入口：浅色/深色外观、上传、选起点、自动轮换、淡化浓度。
 6. 「✦ 长期记忆」：模型用 `silverwolf_memory_add / search / forget` 读写，也可以手动加、删、清空。
-7. 「✦ 世界书」：内置银狼LV.999 设定库，模型用 `silverwolf_worldbook_search` 检索。
+7. 「✦ 世界书」：设定库默认**为空**，需用 `tools/build-worldbook.mjs --source <wiki原始json>` 生成后放入指定路径。模型用 `silverwolf_worldbook_search` 检索。
 
 ## 素材说明
 

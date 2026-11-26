@@ -18,6 +18,7 @@
 | --- | --- |
 | 主题 UI | 客户端半注入作用域化样式表（`body[data-dsh-silverwolf][data-silverwolf-skin="on"]`）：银白/蓝紫赛博渐变、半透明表面 token、`backdrop-filter` 毛玻璃、蓝色描边与柔和阴影、蓝色滚动条/选区。全部随插件卸载自动还原。 |
 | 人格设定 | 宿主半注册 `systemPrompt.section({ name: 'silverwolf:persona', ... })`——人格底稿为银狼LV.999（慵懒毒舌的满级骇客，欢愉命途 · 虚数属性）。侧边栏可编辑，改完立即对之后每一轮对话生效。 |
+| 表情包 | 素材在 `meme/`，`stickers.json` 是清单（id / 名称 / 什么时候用 / 文件）。宿主半把清单拼成「【表情包】」说明附在人格之后，模型会在合适的时候贴一张。面板里可加图、删图、调贴图大小。 |
 | 背景图 | 随包 `Background/`（含银狼LV.999 壁纸）+ 面板上传 `backgrounds-custom/`。面板里开关、选起点、自动轮换、淡化浓度、上传/删除；深色模式自动切换。 |
 | 长期记忆 | 存在 `$DSH_HOME/silverwolf-memory.json`，工具 `silverwolf_memory_add / search / forget`，独立 section 注入系统提示词。 |
 | 世界书 | 设定库存在 `$DSH_HOME/silverwolf-worldbook.json`，工具 `silverwolf_worldbook_search` 检索。面板里可**从 BWIKI（wiki.biligame.com/sr）一键抓取**「银狼 / 银狼LV.999」的档案、故事、简介。 |
@@ -64,9 +65,10 @@ dsh plugin --profile desktop add D:\path\to\dsh-silverwolf-theme
 2. 侧边栏最下方、设置按钮旁边点「✦ 银狼」打开人格设定面板（Esc 或右上角 ✕ 关闭）。
 3. 也可以在「设置 → 银狼 · 主题」里打开同一份编辑器；标题右边的版本号读的是 `package.json`。
 4. 编辑框里写的就是人格底稿——内置默认就是银狼LV.999（语气 / 边界 / 参考回答格式三段，嫌啰嗦可以直接删掉再用）；点「保存设定」后，之后每一轮对话都会以这段设定回答。
-5. 下面一行「✦ 背景图管理」是背景的唯一入口：最上面「浅色 / 深色」切整个应用外观；「背景图 / 简约（无图）」二选一；上传一张自己的图；点缩略图设为起点；自动轮换（间隔 15–600 秒）；淡化浓度（0.2–0.85）；自己传的那几张角上有「删除」。
-6. 再下面「✦ 长期记忆」：启用开关、搜索、手动加一条、删单条、清空。平时不用管它——模型觉得该记的会自己调 `silverwolf_memory_add` 写进来，需要翻旧事时自己调 `silverwolf_memory_search`。
-7. 再下面「✦ 世界书」：点「从官方 wiki 抓取」一键拉取「银狼 / 银狼LV.999」的档案、故事、简介（几秒钟）；模型需要设定时自己调 `silverwolf_worldbook_search` 查。
+5. 「✦ 表情包管理」是表情包的入口：拖「聊天里的贴图大小」滑杆调大小；「添加」一行填名字 / 什么时候贴再选张图（png / jpg / gif / webp / avif，单张 ≤8MB）；自己加的那些卡片角上有「✕ 删除」。包内的 11 张删不了——改 `stickers.json` 才是它们的入口。
+6. 下面一行「✦ 背景图管理」是背景的唯一入口：最上面「浅色 / 深色」切整个应用外观；「背景图 / 简约（无图）」二选一；上传一张自己的图；点缩略图设为起点；自动轮换（间隔 15–600 秒）；淡化浓度（0.2–0.85）；自己传的那几张角上有「删除」。
+7. 再下面「✦ 长期记忆」：启用开关、搜索、手动加一条、删单条、清空。平时不用管它——模型觉得该记的会自己调 `silverwolf_memory_add` 写进来，需要翻旧事时自己调 `silverwolf_memory_search`。
+8. 再下面「✦ 世界书」：点「从官方 wiki 抓取」一键拉取「银狼 / 银狼LV.999」的档案、故事、简介（几秒钟）；模型需要设定时自己调 `silverwolf_worldbook_search` 查。
 
 ### 改完之后什么时候生效
 
@@ -82,6 +84,7 @@ dsh plugin --profile desktop add D:\path\to\dsh-silverwolf-theme
 
 ```json
 { "persona": "……人格提示词……", "enabled": true, "theme": true,
+  "stickers": true, "stickerSize": 96,
   "hero": { "image": "meme/hero-silverwolf.png", "title": "LV999 的银狼，来当你的外挂" },
   "background": { "enabled": true, "current": "", "rotate": false, "interval": 90, "dim": 0.6 },
   "rev": 3 }
@@ -90,6 +93,8 @@ dsh plugin --profile desktop add D:\path\to\dsh-silverwolf-theme
 - `persona`：空字符串表示不注入人格。
 - `enabled`：人格总开关。
 - `theme`：银白赛博主题开关（关掉只留人格，UI 回到原样）。
+- `stickers`：表情包开关（关掉后人格正文里不再附「怎么贴」的约定）。
+- `stickerSize`：聊天里贴图的最大边长（px），落盘前夹在 48–320 之间。它**不跟主题开关走**。
 - `hero`：新会话欢迎页的形象路径（相对插件目录）与欢迎语。
 - `background`：整页背景。`enabled` 总开关、`current` 起点文件名（空串＝按目录顺序第一张）、`rotate` 自动轮换、`interval` 轮换间隔秒数（15–3600）、`dim` 色纱浓度（0.2–0.85，越大越淡）。
 - `rev`：写入版本号，每次成功写入 +1。
@@ -104,8 +109,9 @@ dsh plugin --profile desktop add D:\path\to\dsh-silverwolf-theme
 
 - **欢迎页立绘**：`meme/hero-silverwolf.png` 是银狼LV.999 立绘（2048×2048 透明 PNG）。
 - **背景图**：`Background/silverwolf-lv999-art.jpg` 是银狼LV.999 壁纸（2973×1409，网络搜集）。
+- **表情包**：`meme/` 下 11 张为占位图（银白赛博风程序化图形，非官方素材），清单在 `stickers.json`。想换真实表情，把图放进 `meme/` 并让 `file` 字段对齐即可。
 
-> 上述立绘/壁纸素材搜集自网络，版权归原作者与 © miHoYo / HoYoverse 所有，仅作非商用同人使用。**如有素材涉及侵权，请通过仓库 Issues 告知，核实后将立即删除。** 如需自用其他立绘，替换对应文件即可。
+> 上述立绘/壁纸素材搜集自网络，版权归原作者与 © miHoYo / HoYoverse 所有，仅作非商用同人使用。**如有素材涉及侵权，请通过仓库 Issues 告知，核实后将立即删除。**
 
 ## 数据来源与免责
 

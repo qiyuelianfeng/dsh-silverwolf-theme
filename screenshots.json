@@ -1,14 +1,4 @@
-{
-  "screenshots": [
-    {
-      "path": "Background/silverwolf-lv999-art.jpg",
-      "title": "银狼LV.999 背景壁纸",
-      "description": "官方贺图作为整页背景"
-    },
-    {
-      "path": "meme/hero-silverwolf.png",
-      "title": "银狼LV.999 欢迎页立绘",
-      "description": "新会话欢迎页形象"
-    }
-  ]
-}
+[
+  "meme/hero-silverwolf.png",
+  "Background/silverwolf-lv999-art.jpg"
+]
